@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Fridge">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="125dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="50dp"
+        >
+
+
+        <ImageButton
+            android:id="@+id/Fback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/back_button"
+             />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="125dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="60dp"
+        >
+
+
+        <ImageButton
+            android:id="@+id/Fprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4BB4AD"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/psycho_lover" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="125dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="60dp"
+        >
+
+
+        <ImageButton
+            android:id="@+id/Fsettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ADFB0000"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/settings_icon" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/vegetables"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="-375dp"
+        android:layout_marginTop="175dp"
+        android:background="@drawable/vegetables_btn"
+        app:srcCompat="@drawable/vegetables" />
+
+    <TextView
+        android:id="@+id/vegetablesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="310dp"
+        android:layout_marginLeft="-150dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Vegetables" />
+
+    <ImageButton
+        android:id="@+id/fruits"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="175dp"
+        android:background="@drawable/fruits_btn"
+        app:srcCompat="@drawable/fruits"
+        android:scaleType="fitCenter"
+        />
+
+    <TextView
+        android:id="@+id/fruitsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="310dp"
+        android:layout_marginLeft="-115dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Fruits" />
+
+
+    <ImageButton
+        android:id="@+id/meat"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="-325dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/meat_btn"
+        app:srcCompat="@drawable/meat"
+       android:scaleType="fitCenter"
+        />
+
+    <TextView
+        android:id="@+id/meatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="535dp"
+        android:layout_marginLeft="-110dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Meat" />
+
+    <ImageButton
+        android:id="@+id/liquids"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/liquids_btn"
+        app:srcCompat="@drawable/water"
+        android:scaleType="fitCenter"
+        />
+
+    <TextView
+        android:id="@+id/liquidsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="535dp"
+        android:layout_marginLeft="-122dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Liquids" />
+
+    <Button
+        android:id="@+id/deleteItem"
+        android:layout_width="190dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="-345dp"
+        android:layout_marginTop="600dp"
+        android:backgroundTint="#FF0000"
+        android:text="delete item"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/addItem"
+        android:layout_width="190dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="612dp"
+        android:backgroundTint="#3EEA2F"
+        android:textColor="@color/black"
+        android:text="add item"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-400dp"
+        android:layout_marginTop="775dp"
+        app:cardBackgroundColor="#FD9676"
+        >
+
+
+        <ImageButton
+            android:id="@+id/FfridgeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#FD9676"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/refrigerator" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="775dp"
+        app:cardBackgroundColor="#A4D27F"
+        >
+
+
+        <ImageButton
+            android:id="@+id/FrecipeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#A4D27F"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/recipe" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="775dp"
+        app:cardBackgroundColor="#FAFD66"
+        >
+
+
+        <ImageButton
+            android:id="@+id/FshoppingIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#FAFD66"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/shopping_cart" />
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

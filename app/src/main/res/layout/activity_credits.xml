@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".Credits">
+
+    <TextView
+        android:id="@+id/producers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:text="Producers"
+        android:textAlignment="center"
+        android:textColor="#41EA13"
+        android:textSize="55dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Amirhossien Ahani\nAhmad Haikal\nAhmet Orhun Saka\nDeniz Yazıcı"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/instructor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:text="Instructor"
+        android:textAlignment="center"
+        android:textColor="#41EA13"
+        android:textSize="55dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Lori Rae Russell dağ"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/TA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:text="TA"
+        android:textAlignment="center"
+        android:textColor="#41EA13"
+        android:textSize="55dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Aziza Saber Jabdaragh"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="38dp" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="ok"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        android:textStyle="bold" />
+    />
+</LinearLayout>
