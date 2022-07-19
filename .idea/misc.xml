@@ -20,7 +20,7 @@
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_main_menu.xml" value="0.176" />
-        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_profile.xml" value="0.152" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_profile.xml" value="0.6" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_register.xml" value="0.176" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_settings.xml" value="0.176" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/fragment_dashboard.xml" value="0.25416666666666665" />
@@ -37,7 +37,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.2" />
+        <option name="scale" value="0.136" />
       </ProjectState>
     </option>
   </component>

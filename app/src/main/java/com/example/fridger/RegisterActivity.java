@@ -19,7 +19,6 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         confirmPassword = findViewById(R.id.confirmPassword);
@@ -83,4 +82,6 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
     }
+
+    //helo
 }
