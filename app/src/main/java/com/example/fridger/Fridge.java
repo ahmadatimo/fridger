@@ -35,14 +35,16 @@ public class Fridge extends AppCompatActivity {
         deleteItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Fridge.this, "no function added yet", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext() , Delete_Menu.class);
+                startActivity(intent);
             }
         });
 
         addItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Fridge.this, "no function added yet", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), Add_Menu.class);
+                startActivity(intent);
             }
         });
 

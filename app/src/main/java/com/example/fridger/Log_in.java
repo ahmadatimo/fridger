@@ -7,17 +7,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
-import com.example.fridger.databinding.ActivityMainBinding;
-
-public class MainActivity extends AppCompatActivity {
+public class Log_in extends AppCompatActivity {
 
     EditText username, password;
     Button signIn, register;
@@ -26,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.log_in);
 
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
@@ -43,28 +35,28 @@ public class MainActivity extends AppCompatActivity {
                 if (user.equals("") && pass.equals(""))
                 {
                     // if both data is empty the user will have this warning
-                    Toast.makeText(MainActivity.this,"both fields are missing!!!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Log_in.this,"both fields are missing!!!",Toast.LENGTH_SHORT).show();
                 }
                 else if(user.equals(""))
                 {
-                    Toast.makeText(MainActivity.this,"username is missing!!!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Log_in.this,"username is missing!!!",Toast.LENGTH_SHORT).show();
                 }
                 else if(pass.equals(""))
                 {
-                    Toast.makeText(MainActivity.this,"password is missing!!!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Log_in.this,"password is missing!!!",Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
                     boolean checkUserPass = database.checkUsernamePassword(user,pass); // check the if the user exists in the database
                     if(checkUserPass == true)
                     {
-                        Toast.makeText(MainActivity.this,"logging in...",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Log_in.this,"logging in...",Toast.LENGTH_SHORT).show();
                         Intent intent =  new Intent(getApplicationContext(), MainMenu.class);
                         startActivity(intent);
                     }
                     else
                     {
-                        Toast.makeText(MainActivity.this,"Invalid inputs" ,Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Log_in.this,"Invalid inputs" ,Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -74,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) // this will lead you to the register frame
             {
-                Toast.makeText(MainActivity.this,"registering...",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Log_in.this,"registering...",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext() , RegisterActivity.class);
                 startActivity(intent);
             }

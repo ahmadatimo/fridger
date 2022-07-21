@@ -9,7 +9,7 @@
     android:background="@drawable/background"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".MainActivity"
+    tools:context=".Log_in"
     >
 
     <TextView
@@ -64,7 +64,7 @@
                 android:layout_height="match_parent"
                 android:hint="Username"
                 android:textAlignment="center"
-                android:textSize="25dp"/>
+                android:textSize="25dp" />
 
 
         </androidx.cardview.widget.CardView>

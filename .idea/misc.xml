@@ -15,16 +15,28 @@
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/drawable/round_btn.xml" value="0.134" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/drawable/vegetables_btn.xml" value="0.12" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_about.xml" value="0.152" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_add_fruits.xml" value="0.264" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_add_item.xml" value="0.1" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_add_item2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_add_item_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_add_items.xml" value="0.16799999999999998" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_add_liquids.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_add_meat.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_add_menu.xml" value="0.264" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_add_vegetables.xml" value="0.264" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_credits.xml" value="0.176" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_delete_menu.xml" value="0.2" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_fridge.xml" value="0.2" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_main_menu.xml" value="0.176" />
-        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_profile.xml" value="0.6" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_profile.xml" value="0.176" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_register.xml" value="0.176" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_settings.xml" value="0.176" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/dropdown_item.xml" value="0.72" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/fragment_dashboard.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/fragment_home.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/log_in.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

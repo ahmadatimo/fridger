@@ -15,7 +15,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:gravity="center_horizontal"
-        android:text="Hello, "
+        android:text="Hello, Amirhossein"
         android:textColor="@color/white"
         android:textSize="50dp"
         android:textStyle="bold" />
@@ -119,28 +119,40 @@
                     android:layout_width="125dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="50dp" />
+                    android:layout_marginTop="50dp"
+                    android:backgroundTint="@color/teal_700"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ducky"/>
 
                 <ImageButton
                     android:id="@+id/icon8"
                     android:layout_width="125dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="175dp"
-                    android:layout_marginTop="-100dp" />
+                    android:layout_marginTop="-100dp"
+                    android:backgroundTint="@color/teal_700"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/rackon"/>
 
                 <ImageButton
                     android:id="@+id/icon9"
                     android:layout_width="125dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="50dp" />
+                    android:layout_marginTop="50dp"
+                    android:backgroundTint="@color/teal_200"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/rabbit"/>
 
                 <ImageButton
                     android:id="@+id/icon10"
                     android:layout_width="125dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="175dp"
-                    android:layout_marginTop="-100dp" />
+                    android:layout_marginTop="-100dp"
+                    android:backgroundTint="@color/teal_200"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/kazuha"/>
 
             </LinearLayout>
         </ScrollView>

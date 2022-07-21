@@ -14,7 +14,7 @@ public class Settings extends AppCompatActivity {
     Button logOut , goBack;
     ImageButton userpencil , passpencil;
     DBHelper database;
-    MainActivity user;
+    Log_in user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +25,7 @@ public class Settings extends AppCompatActivity {
         userpencil = findViewById(R.id.userpencil);
         passpencil = findViewById(R.id.passpencil);
         database = new DBHelper(this);
-        user = new MainActivity();
+        user = new Log_in();
 
         logOut.setOnClickListener(new View.OnClickListener()
         {
@@ -33,7 +33,7 @@ public class Settings extends AppCompatActivity {
             public void onClick(View v)
             {
                 Toast.makeText(Settings.this, "Logging out...", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext() ,MainActivity.class);
+                Intent intent = new Intent(getApplicationContext() , Log_in.class);
                 startActivity(intent);
             }
         });
