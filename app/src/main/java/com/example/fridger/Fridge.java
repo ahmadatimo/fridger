@@ -19,6 +19,12 @@ public class Fridge extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fridge);
 
+        initializing();
+        buttonsFunctions();
+    }
+
+    public void initializing()
+    {
         deleteItem = findViewById(R.id.deleteItem);
         addItem = findViewById(R.id.addItem);
         back = findViewById(R.id.Fback);
@@ -31,6 +37,10 @@ public class Fridge extends AppCompatActivity {
         fridge = findViewById(R.id.FfridgeIcon);
         recipe = findViewById(R.id.FrecipeIcon);
         shopping = findViewById(R.id.FshoppingIcon);
+    }
+
+    public void buttonsFunctions()
+    {
 
         deleteItem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,31 +82,43 @@ public class Fridge extends AppCompatActivity {
             }
         });
 
-        vegetables.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(Fridge.this, "not ready yet", Toast.LENGTH_SHORT).show();
-            }
-        });
-
         fruits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Fridge.this, "not made yet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Fridge.this, "Fruits...", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext() , StoredItems.class);
+                intent.putExtra(StoredItems.copyTitle , "Fruits");
+                startActivity(intent);
+            }
+        });
+
+        vegetables.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Fridge.this, "Vegetables...", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext() , StoredItems.class);
+                intent.putExtra(StoredItems.copyTitle,"Vegetables");
+                startActivity(intent);
             }
         });
 
         meat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Fridge.this, "not made yet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Fridge.this, "Meat...", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext() , StoredItems.class);
+                intent.putExtra(StoredItems.copyTitle,"Meat");
+                startActivity(intent);
             }
         });
 
         liquids.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Fridge.this,"not done yet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Fridge.this, "Liquids...", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext() , StoredItems.class);
+                intent.putExtra(StoredItems.copyTitle,"Liquids");
+                startActivity(intent);
             }
         });
 
@@ -110,7 +132,8 @@ public class Fridge extends AppCompatActivity {
         recipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Fridge.this, "not ready yet", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext() , Recipes.class);
+                startActivity(intent);
             }
         });
 
@@ -121,4 +144,5 @@ public class Fridge extends AppCompatActivity {
             }
         });
     }
+
 }

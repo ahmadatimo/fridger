@@ -14,19 +14,19 @@
         android:theme="@style/Theme.Fridger"
         tools:targetApi="31">
         <activity
+            android:name=".StoredItems"
+            android:exported="false" />
+        <activity
+            android:name=".HowToCook"
+            android:exported="false" />
+        <activity
+            android:name=".Recipes"
+            android:exported="false" />
+        <activity
             android:name=".Delete_Menu"
             android:exported="false" />
         <activity
-            android:name=".Add_Liquids"
-            android:exported="false" />
-        <activity
-            android:name=".Add_Meat"
-            android:exported="false" />
-        <activity
-            android:name=".Add_Vegetables"
-            android:exported="false" />
-        <activity
-            android:name=".Add_Fruits"
+            android:name=".Add_Item"
             android:exported="false" />
         <activity
             android:name=".Add_Menu"

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".Add_Meat">
+    tools:context=".Add_Item">
+
+
     <androidx.cardview.widget.CardView
         android:layout_width="360dp"
         android:layout_height="582dp"
@@ -23,19 +26,19 @@
             app:cardBackgroundColor="#D9D9D9">
 
             <TextView
-                android:id="@+id/Meat"
+                android:id="@+id/item"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="30dp"
-                android:text="Meat:"
+                android:text="Fruit:"
                 android:textSize="30dp"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/nameOfMeat"
+                android:id="@+id/itemHint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="100dp"
@@ -44,7 +47,7 @@
                 android:ems="50"
                 android:textAlignment="center"
                 android:inputType="textPersonName"
-                android:hint="add Meat" />
+                android:hint="Name of the fruit" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -55,7 +58,7 @@
             app:cardBackgroundColor="#D9D9D9">
 
             <TextView
-                android:id="@+id/mQuantity"
+                android:id="@+id/quantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -67,7 +70,7 @@
                 android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/numOfMeat"
+                android:id="@+id/itemNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="145dp"
@@ -99,7 +102,7 @@
                 android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/mDaysLeft"
+                android:id="@+id/DaysLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="130dp"
@@ -112,7 +115,7 @@
         </androidx.cardview.widget.CardView>
 
         <Button
-            android:id="@+id/addAMeat"
+            android:id="@+id/addAFruit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Item to the Fridge"

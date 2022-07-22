@@ -1,0 +1,120 @@
+package com.example.fridger;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class Recipes extends AppCompatActivity {
+
+    ImageButton goBack ,profile ,settings ,previous ,next ,fridge ,recipes ,shopping;
+    Button button;
+    TextView title;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_recipes);
+
+
+        initializingAttributes();
+        initializingButtons();
+
+
+
+    }
+
+    public void initializingAttributes()
+    {
+        goBack = findViewById(R.id.Rback);
+        profile = findViewById(R.id.Rprofile);
+        settings = findViewById(R.id.Rsettings);
+        previous = findViewById(R.id.previous);
+        next = findViewById(R.id.next);
+        fridge = findViewById(R.id.RfridgeIcon);
+        recipes = findViewById(R.id.RrecipeIcon);
+        shopping = findViewById(R.id.RshoppingIcon);
+        button = findViewById(R.id.howTo);
+        title = findViewById(R.id.recipeTitle);
+    }
+
+    public void initializingButtons()
+    {
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext() ,MainMenu.class);
+                startActivity(intent);
+            }
+        });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext() , Profile.class);
+                startActivity(intent);
+            }
+        });
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Settings.class);
+                startActivity(intent);
+            }
+        });
+        /**
+         previous.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+        }
+        });
+
+         next.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+        }
+        });
+         */
+        fridge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Fridge.class);
+                startActivity(intent);
+            }
+        });
+
+        recipes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Recipes.this, "Are you trying to be funny ?", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+      /**
+        shopping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+       */
+
+      button.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              Toast.makeText(Recipes.this, "No shame to learn", Toast.LENGTH_SHORT).show();
+              Intent intent = new Intent(getApplicationContext() , HowToCook.class);
+              startActivity(intent);
+          }
+      });
+
+    }
+}

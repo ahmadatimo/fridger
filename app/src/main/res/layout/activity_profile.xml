@@ -45,7 +45,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="225dp">
 
@@ -62,7 +62,7 @@
                     android:layout_marginTop="15dp"
                     android:backgroundTint="@color/white"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/bota"/>
+                    app:srcCompat="@drawable/bota" />
 
                 <ImageButton
                     android:id="@+id/icon2"
@@ -72,7 +72,7 @@
                     android:layout_marginTop="-100dp"
                     android:backgroundTint="@color/white"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/cartooncat"/>
+                    app:srcCompat="@drawable/cartooncat" />
 
                 <ImageButton
                     android:id="@+id/icon3"
@@ -92,7 +92,7 @@
                     android:layout_marginTop="-100dp"
                     android:backgroundTint="@color/purple_700"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/dog"/>
+                    app:srcCompat="@drawable/dog" />
 
                 <ImageButton
                     android:id="@+id/icon5"
@@ -122,7 +122,7 @@
                     android:layout_marginTop="50dp"
                     android:backgroundTint="@color/teal_700"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/ducky"/>
+                    app:srcCompat="@drawable/ducky" />
 
                 <ImageButton
                     android:id="@+id/icon8"
@@ -132,7 +132,7 @@
                     android:layout_marginTop="-100dp"
                     android:backgroundTint="@color/teal_700"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/rackon"/>
+                    app:srcCompat="@drawable/rackon" />
 
                 <ImageButton
                     android:id="@+id/icon9"
@@ -142,7 +142,7 @@
                     android:layout_marginTop="50dp"
                     android:backgroundTint="@color/teal_200"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/rabbit"/>
+                    app:srcCompat="@drawable/rabbit" />
 
                 <ImageButton
                     android:id="@+id/icon10"
@@ -152,7 +152,7 @@
                     android:layout_marginTop="-100dp"
                     android:backgroundTint="@color/teal_200"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/kazuha"/>
+                    app:srcCompat="@drawable/kazuha" />
 
             </LinearLayout>
         </ScrollView>

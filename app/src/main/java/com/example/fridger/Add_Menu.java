@@ -33,7 +33,8 @@ public class Add_Menu extends AppCompatActivity {
         fruits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Add_Fruits.class);
+                Intent intent = new Intent(getApplicationContext(), Add_Item.class);
+                intent.putExtra(Add_Item.typeChanger,"Fruit");
                 startActivity(intent);
             }
         });
@@ -41,29 +42,35 @@ public class Add_Menu extends AppCompatActivity {
         vegetables.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Add_Vegetables.class);
+                Intent intent = new Intent(getApplicationContext(), Add_Item.class);
+                intent.putExtra(Add_Item.typeChanger,"Vegetable");
+                intent.putExtra(Add_Item.textSize,23);
                 startActivity(intent);
             }
         });
 
-        meat.setOnClickListener(new View.OnClickListener() {
+        meat.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Add_Meat.class);
+                Intent intent = new Intent(getApplicationContext(), Add_Item.class);
+                intent.putExtra(Add_Item.typeChanger,"Meat");
                 startActivity(intent);
             }
         });
-         /**
-        liquids.setOnClickListener(new View.OnClickListener() {
+
+        liquids.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),addItem.class);
+                Intent intent = new Intent(getApplicationContext(), Add_Item.class);
+                intent.putExtra(Add_Item.typeChanger,"Liquid");
+                intent.putExtra(Add_Item.textSize,23);
                 startActivity(intent);
             }
         });
-*/
+
     }
-
 
 
 }
