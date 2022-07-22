@@ -1,10 +1,24 @@
 I made the Gui , in the third week me and Amir started doing the visual design on Figma where you can access it from this link down below
 https://www.figma.com/file/aLNHEjILt6P0uTPSNGI6lB/Fridgey?node-id=7%3A14
 
-in the fourth week i started learning how to use Android studio where I learned how to change back ground adding text and edit them.
-There I made the register/Login with the LiteSQL databse and added a Main menu
-In the fifth week I learned how to add buttons / ImageButtons / add functions to buttons / how to make a scroll in the program.
-I made a profile picture section / Fridge Class / Settings / AddItems / DeleteItems
-In the sixth Week I started learning how to retrieve data from other Frames and Activities.
-I continued making recipe Gui / and functions to the how to cook / Fridge buttons / 
-This Week I will finish the Gui completelty hopefully
+>  15-7-2022
+>  I started working on Android Studio And did The login activity
+>
+>  16-7-2022
+>  I continued the register/Login with the LiteSQL databse and added a Main menu with 4 buttons
+>
+>   17-7-2022
+>   I did the Fridge activity with settings, Credits, and About activity.
+>
+>   18-7-2022
+>   I finished the Profile, getback , settings activities, and Fridge with adding items Features
+>  
+>   19-7-2022 
+>   I am done with recipe class and how to cook button in that class
+>
+>   20-7-2022
+>   I Have been dealing with bugs that happened whenever I click on the  buttons on Fridge
+>
+>   21-7-2022
+>   Contacted @Ulaş Dilek to help me ,and he solved most of the buggs and also gave me and Amir
+>   Many tricks and In the fifth week I learned how to add buttons / ImageButtons / add functions to buttons / how to make a scroll in the program.
