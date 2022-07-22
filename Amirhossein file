@@ -2,3 +2,19 @@ Amirhossein Ahani
 22101535  
 
 Back end desinger and programmer for fridger application
+
+
+> 15-07-2022
+
+> I have implement the logic part of the program using java. i have made the different objects item/recipe/allrecipes(as our database)/user/icon/allicons/
+measure/shoppingList/recipes/Type/Quantity/Fridge/Fridger and used different logics to get the certain functionalities each time.
+In the main program Fridger the object of other types are being created and used according to the needs of user.
+for example i have different functions to find the needed recipes/ finding unavailable recipes / removing the item from the fridge if the item's expiration
+date is due and etc
+
+
+
+Also i have implemented the control part by using the logic and implementing it to the GUI part. The control is the part which the user interface uses the
+logic from back end to get specific information.
+
+
