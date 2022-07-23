@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Delete_Item">
+
+    <TextView
+        android:id="@+id/deleteTypeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="75dp"
+        android:textSize="40dp"
+        android:fontFamily="@font/imbue_medium"
+        android:textColor="@color/black"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/deleteItemImage"
+        android:layout_width="205dp"
+        android:layout_height="172dp"
+        android:scaleType="fitCenter"
+        android:layout_marginLeft="45dp"
+        app:srcCompat="@drawable/meat" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-350dp"
+        android:layout_marginTop="250dp" />
+
+    <Button
+        android:id="@+id/goBackFromDeleteItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:backgroundTint="#FB0000"
+        android:textSize="50dp"
+        android:layout_marginLeft="-245dp"
+        android:text="go back" />
+
+
+</LinearLayout>

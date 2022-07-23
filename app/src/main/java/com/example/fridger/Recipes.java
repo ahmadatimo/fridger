@@ -34,8 +34,8 @@ public class Recipes extends AppCompatActivity {
         goBack = findViewById(R.id.Rback);
         profile = findViewById(R.id.Rprofile);
         settings = findViewById(R.id.Rsettings);
-        previous = findViewById(R.id.previous);
-        next = findViewById(R.id.next);
+        //previous = findViewById(R.id.previous);
+        //next = findViewById(R.id.next);
         fridge = findViewById(R.id.RfridgeIcon);
         recipes = findViewById(R.id.RrecipeIcon);
         shopping = findViewById(R.id.RshoppingIcon);

@@ -8,9 +8,9 @@ private int totalRecipes;
 
 AllRecipes(){
 
-String[] pastaIngredients =  {"Pasta","White Sauce","Mushroom"};
+String[] pastaIngredients =  {"Pasta","White Sauce","Mushroom"}; // i add pictures called bro for the sake of the program
 Quantity[] pastaQuantities = {new Quantity("100", Measure.GR) , new Quantity("3/4", Measure.PACKET) , new Quantity("150", Measure.GR)};
-recipes.add(new Recipe("Creamy Mushroom pasta",pastaIngredients, "bro", pastaQuantities, "Cook the Pasta by boiling water then add the pasta, after you are done adding the pasta make your favorite white sauce, cut some mushroom in order to add it to the dish later. When the pasta is cooked add the white sauce and the mushrooms to your dish."));
+recipes.add(new Recipe("Creamy",pastaIngredients, "bro", pastaQuantities, "Cook the Pasta by boiling water then add the pasta, after you are done adding the pasta make your favorite white sauce, cut some mushroom in order to add it to the dish later. When the pasta is cooked add the white sauce and the mushrooms to your dish."));
     totalRecipes++;
 String[] dolmaIngredients = {"Grape leaves" , "Rice" , "Meat" };
 Quantity[] dolmaQuantities = {new Quantity("100", Measure.GR) , new Quantity("50", Measure.GR) , new Quantity("50", Measure.GR)};
@@ -50,7 +50,7 @@ public ArrayList<Recipe> getIncludedRecipes(Item item){
         for(int j = 0 ; j<3 ; j++){
             
             if(this.recipes.get(i).getIngredientsByIndex(j).equals(item.getName())){
-                return this.recipes;
+                return this.recipes;// changed it
             }
         }
     }

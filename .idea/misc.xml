@@ -25,6 +25,7 @@
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_add_menu.xml" value="0.264" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_add_vegetables.xml" value="0.264" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_credits.xml" value="0.176" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_delete_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_delete_menu.xml" value="0.2" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_fridge.xml" value="0.264" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_how_to_cook.xml" value="0.2" />
@@ -32,7 +33,7 @@
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_main_menu.xml" value="0.176" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_profile.xml" value="0.176" />
-        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_recipes.xml" value="0.2" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_recipes.xml" value="0.16" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_register.xml" value="0.176" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_settings.xml" value="0.176" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/activity_stored_items.xml" value="0.136" />
@@ -40,6 +41,7 @@
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/fragment_dashboard.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/fragment_home.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/layout/log_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ahmad/Desktop/Bilkent/1st year/Year 1 , summer/Computer Science/Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1425" />
       </map>
     </option>
   </component>
