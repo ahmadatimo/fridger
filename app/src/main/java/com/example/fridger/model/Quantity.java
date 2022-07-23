@@ -1,4 +1,6 @@
 
+package com.example.fridger.model;
+
 public class Quantity {
 
 private String amount;

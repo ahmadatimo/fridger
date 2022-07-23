@@ -1,3 +1,4 @@
+package com.example.fridger.model;
 import java.util.ArrayList;
 
 public class AllIcons {

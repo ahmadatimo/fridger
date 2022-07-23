@@ -1,4 +1,6 @@
 
+package com.example.fridger.model;
+
 public class Test {
 public static void main(String[] args) {
 

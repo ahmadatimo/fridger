@@ -23,20 +23,20 @@ public class StoredItems extends AppCompatActivity {
         setContentView(R.layout.activity_stored_items);
 
 
-        ok = findViewById(R.id.stored_items_ok);
-        recipeTitle = findViewById(R.id.howToCookTitle);
-        changeStored = findViewById(R.id.howToText);
-        title = "";
-        stored = "";
-        // initializing();
+
+        initializing();
+        changeData();
         buttonsFunctions();
 
     }
 
     public void initializing()
     {
-        ok = findViewById(R.id.button);
-
+        ok = findViewById(R.id.stored_items_ok);
+        recipeTitle = findViewById(R.id.howToCookTitle);
+        changeStored = findViewById(R.id.howToText);
+        title = "";
+        stored = "";
     }
 
     public void changeData()

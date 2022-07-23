@@ -1,3 +1,5 @@
+package com.example.fridger.model;
+
 public class Icon{
 
 private String name;

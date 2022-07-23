@@ -1,5 +1,7 @@
-import java.util.ArrayList;
 
+package com.example.fridger.model;
+
+import java.util.ArrayList;
 public class ShoppingList {
 
 private static AllRecipes allRecipes;

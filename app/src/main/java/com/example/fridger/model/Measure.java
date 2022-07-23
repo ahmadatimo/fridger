@@ -1,4 +1,6 @@
 
+package com.example.fridger.model;
+
 public enum Measure {
 
 PACKET,
