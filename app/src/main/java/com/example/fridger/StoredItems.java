@@ -23,7 +23,6 @@ public class StoredItems extends AppCompatActivity {
         setContentView(R.layout.activity_stored_items);
 
 
-
         initializing();
         changeData();
         buttonsFunctions();
