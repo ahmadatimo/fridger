@@ -52,18 +52,26 @@ public class PageAdapter extends PagerAdapter {
         TextView titleMain, titleSub, ingredientOne, quantityOne, ingredientTwo, quantityTwo, ingredientThree, quantityThree, howToCook;
 
         titleMain = view1.findViewById(R.id.recipeTitle);
+        titleMain.setText(contents.get(position).getTitle());
         titleSub = view2.findViewById(R.id.foodTitle);
+        titleSub.setText(contents.get(position).getTitle());
 
         ingredientOne = view1.findViewById(R.id.ingredientOne);
+        ingredientOne.setText(contents.get(position).getIngredientOne());
         ingredientTwo = view1.findViewById(R.id.ingredientTwo);
+        ingredientTwo.setText(contents.get(position).getIngredientTwo());
         ingredientThree = view1.findViewById(R.id.ingredientThree);
+        ingredientThree.setText(contents.get(position).getIngredientThree());
 
         quantityOne = view1.findViewById(R.id.quantityOne);
+        quantityOne.setText(contents.get(position).getQuantityOne());
         quantityTwo = view1.findViewById(R.id.quantityTwo);
+        quantityTwo.setText(contents.get(position).getQuantityTwo());
         quantityThree = view1.findViewById(R.id.quantityThree);
+        quantityThree.setText(contents.get(position).getQuantityThree());
 
         howToCook = view2.findViewById(R.id.description);
-
+        howToCook.setText(contents.get(position).getHowToCook());
 
 
 
@@ -72,6 +80,7 @@ public class PageAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        super.destroyItem(container, position, object);
+
+        container.removeView((View)object);
     }
 }

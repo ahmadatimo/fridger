@@ -4,9 +4,12 @@ public class ViewPager {
 
     public String title;
     public int image;
-    public String Recipe1;
-    public String Recipe2;
-    public String Recipe3;
+    public String ingredientOne;
+    public String ingredientTwo;
+    public String ingredientThree;
+    public String quantityOne;
+    public String quantityTwo;
+    public String quantityThree;
     public String howToCook;
 
     public String getTitle() {
@@ -17,16 +20,28 @@ public class ViewPager {
         return image;
     }
 
-    public String getRecipe1() {
-        return Recipe1;
+    public String getIngredientOne() {
+        return ingredientOne;
     }
 
-    public String getRecipe2() {
-        return Recipe2;
+    public String getIngredientTwo() {
+        return ingredientTwo;
     }
 
-    public String getRecipe3() {
-        return Recipe3;
+    public String getIngredientThree() {
+        return ingredientThree;
+    }
+
+    public String getQuantityOne() {
+        return quantityOne;
+    }
+
+    public String getQuantityTwo() {
+        return quantityTwo;
+    }
+
+    public String getQuantityThree() {
+        return quantityThree;
     }
 
     public String getHowToCook() {
