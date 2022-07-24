@@ -4,14 +4,13 @@ public class Fridger {
 
 private Fridge fridge;
 private User user;
-private ShoppingList shoppinglist;
 private Recipes recipes;
 
 public Fridger(String username, String password){
 
 fridge = new Fridge();
 user = new User(username, password);
-shoppinglist = new ShoppingList(fridge);
+
 
 }
 
@@ -31,10 +30,5 @@ public User getUser(){
 
     return this.user;
 }
-public ShoppingList getShoppingList(){
 
-    return this.shoppinglist;
-
-}
-    
 }

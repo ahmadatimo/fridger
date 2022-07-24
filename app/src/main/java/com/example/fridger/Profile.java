@@ -3,6 +3,7 @@ package com.example.fridger;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -119,5 +120,9 @@ public class Profile extends AppCompatActivity {
         });
     }
 
+    public void setProfilePicture(ImageView main)
+    {
+        profilePicture.image = main;
+    }
 
 }

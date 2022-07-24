@@ -9,8 +9,12 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.fridger.model.PFP;
+
+
 
 public class Fridge extends AppCompatActivity {
+
 
     Button deleteItem , addItem;
     ImageButton back , profile , settings , vegetables , fruits , meat , liquids, fridge , recipe , shopping;
@@ -20,6 +24,7 @@ public class Fridge extends AppCompatActivity {
         setContentView(R.layout.activity_fridge);
 
         initializing();
+        setProfile();
         buttonsFunctions();
     }
 
@@ -37,6 +42,11 @@ public class Fridge extends AppCompatActivity {
         fridge = findViewById(R.id.FfridgeIcon);
         recipe = findViewById(R.id.FrecipeIcon);
         shopping = findViewById(R.id.FshoppingIcon);
+    }
+
+    public void setProfile()
+    {
+        profile = (ImageButton) PFP.image;
     }
 
     public void buttonsFunctions()

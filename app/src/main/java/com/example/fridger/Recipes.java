@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.fridger.model.PFP;
 import com.example.fridger.model.ViewPagerModel;
 
 import java.util.ArrayList;
@@ -35,6 +36,7 @@ public class Recipes extends AppCompatActivity {
 
         initializingAttributes();
         initializingButtons();
+        setProfile();
 
 
 
@@ -127,5 +129,9 @@ public class Recipes extends AppCompatActivity {
           }
       });
 
+    }
+
+    public void setProfile() {
+        profile = (ImageButton) PFP.image;
     }
 }

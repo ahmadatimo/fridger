@@ -4,12 +4,12 @@ package com.example.fridger.model;
 import java.util.ArrayList;
 public class ShoppingList {
 
-private static AllRecipes allRecipes;
-private Fridge fridge;
-private ArrayList<Recipe> unavailableRecipes;
-private ArrayList<ArrayList<String>> ingredients;
-private ArrayList<ArrayList<Integer>> countOfIngredients;
-private ArrayList<ArrayList<Quantity>> quantitiesOfIngredients;
+    private static AllRecipes allRecipes;
+    private Fridge fridge;
+    private ArrayList<Recipe> unavailableRecipes;
+    private ArrayList<ArrayList<String>> ingredients;
+    private ArrayList<ArrayList<Integer>> countOfIngredients;
+    private ArrayList<ArrayList<Quantity>> quantitiesOfIngredients;
 
 
 ShoppingList(Fridge fridge){
