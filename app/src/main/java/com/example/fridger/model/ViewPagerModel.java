@@ -1,6 +1,6 @@
 package com.example.fridger.model;
 
-public class ViewPager {
+public class ViewPagerModel {
 
     public String title;
     public int image;
