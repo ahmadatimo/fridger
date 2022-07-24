@@ -9,8 +9,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.example.fridger.model.PFP;
+
 public class Profile extends AppCompatActivity {
 
+    PFP profilePicture;
     Button goBack;
     ImageButton icon1,icon2,icon3,icon4,icon5,icon6,icon7,icon8,icon9,icon10;
     ImageView main;
