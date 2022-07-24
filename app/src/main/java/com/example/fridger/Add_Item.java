@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.fridger.model.Item;
+import com.example.fridger.model.Type;
+
 public class Add_Item extends AppCompatActivity {
 
     EditText item , quantity , daysLeft;
@@ -23,6 +26,7 @@ public class Add_Item extends AppCompatActivity {
 
         initializingData();
         setTypeChanger();
+        addItem();
 
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +44,9 @@ public class Add_Item extends AppCompatActivity {
         quantity = findViewById(R.id.itemNumber);
         daysLeft = findViewById(R.id.DaysLeft);
         goBack =  findViewById(R.id.goBack);
+
+
+
     }
 
     public void setTypeChanger()
@@ -57,6 +64,17 @@ public class Add_Item extends AppCompatActivity {
         }
         type.setText(typeChanger);
         item.setHint("enter a " + typeChanger);
+    }
+
+
+    private void addItem()
+    {
+        RegisterActivity ra = new RegisterActivity();
+        if(type.getText().toString().equalsIgnoreCase("Fruit"))
+            ra.getFridger().AddItem(new Item(item.getText().toString(),Integer.parseInt(daysLeft.getText().toString()), Type.FRUIT),Integer.parseInt(quantity.getText().toString()));
+
+        
+
     }
 
 }

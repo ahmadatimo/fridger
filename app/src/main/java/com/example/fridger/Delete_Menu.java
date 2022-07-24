@@ -48,6 +48,7 @@ public class Delete_Menu extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext() , Delete_Item.class);
                 int holder = R.array.Fruits;
                 intent.putExtra(Delete_Item.textViewName,"Fruits");
+
                 startActivity(intent);
             }
         });
