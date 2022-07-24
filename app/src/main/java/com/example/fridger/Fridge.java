@@ -1,12 +1,16 @@
 package com.example.fridger;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.fridger.model.PFP;
@@ -24,8 +28,8 @@ public class Fridge extends AppCompatActivity {
         setContentView(R.layout.activity_fridge);
 
         initializing();
-        setProfile();
         buttonsFunctions();
+        setProfile();
     }
 
     public void initializing()
@@ -44,9 +48,12 @@ public class Fridge extends AppCompatActivity {
         shopping = findViewById(R.id.FshoppingIcon);
     }
 
+
+
+
     public void setProfile()
     {
-        profile = (ImageButton) PFP.image;
+        profile.setImageResource(PFP.image);
     }
 
     public void buttonsFunctions()
@@ -79,6 +86,7 @@ public class Fridge extends AppCompatActivity {
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("You clicked Profile");
                 Intent intent = new Intent(getApplicationContext(),Profile.class);
                 startActivity(intent);
             }

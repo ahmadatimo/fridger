@@ -44,9 +44,6 @@ public class Add_Item extends AppCompatActivity {
         quantity = findViewById(R.id.itemNumber);
         daysLeft = findViewById(R.id.DaysLeft);
         goBack =  findViewById(R.id.goBack);
-
-
-
     }
 
     public void setTypeChanger()

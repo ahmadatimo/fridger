@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.fridger.model.Fridger;
+import com.example.fridger.model.PFP;
 
 import java.util.ArrayList;
 
@@ -53,7 +54,8 @@ public class RegisterActivity extends AppCompatActivity {
                         boolean checkUser = database.checkUsername(user);//we go over the database and see if we have the same username
                         if(checkUser == false) // if we do not have we will accept the new username
                         {
-                            boolean add = database.insertData(user,pass); // we will add the new input to the database
+                            PFP.image = R.drawable.psycho_lover;
+                            boolean add = database.insertData(user,pass,PFP.image); // we will add the new input to the database
                             if(add == true) // the database had been written
                             {
                                 Toast.makeText(RegisterActivity.this,"The new account is Registered",Toast.LENGTH_SHORT).show();
@@ -94,5 +96,5 @@ public class RegisterActivity extends AppCompatActivity {
         return this.fridger;
     }
 
-    //helo
+
 }

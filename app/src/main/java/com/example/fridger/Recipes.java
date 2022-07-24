@@ -39,7 +39,6 @@ public class Recipes extends AppCompatActivity {
         setProfile();
 
 
-
     }
 
     public void initializingAttributes()
@@ -131,7 +130,8 @@ public class Recipes extends AppCompatActivity {
 
     }
 
-    public void setProfile() {
-        profile = (ImageButton) PFP.image;
+    public void setProfile()
+    {
+        profile.setImageResource(PFP.image);
     }
 }

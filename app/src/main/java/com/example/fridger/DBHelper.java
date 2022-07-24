@@ -1,5 +1,6 @@
 package com.example.fridger;
 
+import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -27,8 +28,8 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db)
     {
-        db.execSQL("create table users(username TEXT primary key, password TEXT)");
-        //this is a sequel query which creates a table "users" which will have two
+        db.execSQL("create table users(username TEXT primary key, password TEXT, profilePic INTEGER)");
+        //this is a sequel query which creates a table "users" which will have three
         //columns one for username / one for password
     }
 
@@ -38,13 +39,14 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("drop table if exists users");
     }
 
-    public boolean insertData(String username , String password)
+    public boolean insertData(String username , String password, int profilePic)
     {
         SQLiteDatabase db = this.getReadableDatabase(); // database
         ContentValues values = new ContentValues();
         this.username = username;
         values.put("username",username); // add the first column to the content
         values.put("password" , password);// add the second column to the content
+        values.put("profilePic", profilePic);
 
         long result = db.insert("users" , null , values);
         if (result == -1)// the previous line will check if the username and password
@@ -86,6 +88,38 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
+    public int getProfilePic(String username)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from users where username = ?", new String[] {username});//run query
+        //make an imaginary table with all the rows that have the user names we created
+        int index = cursor.getColumnIndex("profilePic");
+        System.out.println("index: " + index + " --- cursorCount: " + cursor.getCount()); //for debugging purposes
+        if (cursor.getCount() > 0 && index >= 0)
+        {
+            cursor.moveToNext();// it is like a list it does not move unless we call this function
+            return cursor.getInt(index);
+        }
+        else
+        {
+            return -1;
+        }
+    }
 
+    public void updateUsername(String username){
+        System.out.println("Updated the username");
+    }
+
+    public void updatePassword(String password){
+        System.out.println("Updated the password");
+    }
+
+    public void updateProfilePic(int profilePic)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("profilePic", profilePic);
+        db.update("users",values,"username = ?", new String[]{username});
+    }
 
 }

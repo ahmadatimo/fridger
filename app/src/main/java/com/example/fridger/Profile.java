@@ -14,10 +14,10 @@ import com.example.fridger.model.PFP;
 
 public class Profile extends AppCompatActivity {
 
-    PFP profilePicture;
     Button goBack;
     ImageButton icon1,icon2,icon3,icon4,icon5,icon6,icon7,icon8,icon9,icon10;
     ImageView main;
+    int newImage = PFP.image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +25,7 @@ public class Profile extends AppCompatActivity {
 
         initializer();
         buttonsFunction();
+
     }
 
     public  void initializer()
@@ -47,82 +48,94 @@ public class Profile extends AppCompatActivity {
     {
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {Profile.super.onBackPressed();}});
+            public void onClick(View v) {
+                PFP.image = newImage;
+                PFP.db.updateProfilePic(newImage);
+                Profile.super.onBackPressed();
+            }});
 
         icon1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                main.setImageResource(R.drawable.bota);
+                newImage = R.drawable.bota;
+                main.setImageResource(newImage);
             }
         });
 
         icon2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                main.setImageResource(R.drawable.cartooncat);
+                newImage = R.drawable.cartooncat;
+                main.setImageResource(newImage);
             }
         });
 
         icon3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                main.setImageResource(R.drawable.psycho_lover);
+                newImage = R.drawable.psycho_lover;
+                main.setImageResource(newImage);
             }
         });
 
         icon4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                main.setImageResource(R.drawable.dog);
+                newImage = R.drawable.dog;
+                main.setImageResource(newImage);
             }
         });
 
         icon5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                main.setImageResource(R.drawable.doll);
+                newImage = R.drawable.doll;
+                main.setImageResource(newImage);
             }
         });
 
         icon6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                main.setImageResource(R.drawable.hamster);
+                newImage = R.drawable.hamster;
+                main.setImageResource(newImage);
             }
         });
 
         icon7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                main.setImageResource(R.drawable.ducky);
+                newImage = R.drawable.ducky;
+                main.setImageResource(newImage);
             }
         });
 
         icon8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                main.setImageResource(R.drawable.rackon);
+                newImage = R.drawable.rackon;
+                main.setImageResource(newImage);
             }
         });
 
         icon9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                main.setImageResource(R.drawable.rabbit);
+                newImage = R.drawable.rabbit;
+                main.setImageResource(newImage);
             }
         });
 
         icon10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                main.setImageResource(R.drawable.kazuha);
+                newImage = R.drawable.kazuha;
+                main.setImageResource(newImage);
             }
         });
+
     }
 
-    public void setProfilePicture(ImageView main)
-    {
-        profilePicture.image = main;
-    }
+
 
 }

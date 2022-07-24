@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.fridger.model.PFP;
+
 public class Log_in extends AppCompatActivity {
 
     EditText username, password;
@@ -50,6 +52,8 @@ public class Log_in extends AppCompatActivity {
                     boolean checkUserPass = database.checkUsernamePassword(user,pass); // check the if the user exists in the database
                     if(checkUserPass == true)
                     {
+                        PFP.image = database.getProfilePic(user);
+                        PFP.db = database;
                         Toast.makeText(Log_in.this,"logging in...",Toast.LENGTH_SHORT).show();
                         Intent intent =  new Intent(getApplicationContext(), MainMenu.class);
                         startActivity(intent);
