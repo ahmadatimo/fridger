@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,10 +19,12 @@ import java.util.List;
 
 public class PageAdapter extends PagerAdapter {
 
-    private List<ViewPager> contents;
+    private List<ViewPagerModel> contents;
     private Context context;
 
-    public PageAdapter(List<ViewPager> contents, Context context) {
+
+
+    public PageAdapter(List<ViewPagerModel> contents, Context context) {
         this.contents = contents;
         this.context = context;
     }

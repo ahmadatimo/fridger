@@ -24,13 +24,13 @@ public class Add_Item extends AppCompatActivity {
         initializingData();
         setTypeChanger();
 
-        goBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Add_Menu.class);
-                startActivity(intent);
-            }
-        });
+       goBack.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(getApplicationContext(), Add_Menu.class);
+               startActivity(intent);
+           }
+       });
     }
 
     public void initializingData()

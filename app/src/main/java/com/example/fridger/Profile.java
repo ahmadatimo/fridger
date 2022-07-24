@@ -43,10 +43,7 @@ public class Profile extends AppCompatActivity {
     {
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Profile.super.onBackPressed();
-            }
-        });
+            public void onClick(View v) {Profile.super.onBackPressed();}});
 
         icon1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,6 +114,7 @@ public class Profile extends AppCompatActivity {
                 main.setImageResource(R.drawable.kazuha);
             }
         });
-
     }
+
+
 }

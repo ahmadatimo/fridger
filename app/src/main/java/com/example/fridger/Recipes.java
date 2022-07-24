@@ -1,6 +1,8 @@
 package com.example.fridger;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +12,16 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.fridger.model.ViewPagerModel;
+
+import java.util.ArrayList;
+
 public class Recipes extends AppCompatActivity {
+
+
+    ViewPager viewPager;
+    PagerAdapter adapter;
+    ArrayList<ViewPagerModel> contents;
 
     ImageButton goBack ,profile ,settings ,previous ,next ,fridge ,recipes ,shopping;
     Button button;
