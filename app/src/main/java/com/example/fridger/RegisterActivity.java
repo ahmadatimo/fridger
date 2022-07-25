@@ -60,7 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
                             {
                                 Toast.makeText(RegisterActivity.this,"The new account is Registered",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(),MainMenu.class);
-                                fridger = new Fridger(user,pass);
+                                fridger = new Fridger();
                                 startActivity(intent); // will jump to main menu
                             }
                             else
