@@ -5,127 +5,127 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
+
 public class Fridge {
 
-private ArrayList<Item> items;
-private int itemCount;
+    private ArrayList<Item> items;
+    private int itemCount;
 
-private Timer timer = new Timer();
-private TimerTask task;
+    private Timer timer = new Timer();
+    private TimerTask task;
 
-Fridge(){
-    items = new ArrayList<Item>();
-    
-}
-public int getItemCount(){
+    Fridge(){
+        items = new ArrayList<Item>();
 
-    return itemCount;
-}
-public Item getItemByIndex(int index){
-
-    return this.items.get(index);
-}
-
-public void addItem(Item item , int quantity){
-
-for(int i = 0 ; i< quantity ; i++){
-
-    items.add(item);
-    itemCount++;
-    
-}
-setTimer();
-
-}
-public void deleteItem(Item item){
-
-for(int i = 0 ; i < items.size() ; i++){
-
-    if(items.get(i).equals(item)){
-        items.remove(i);
-        itemCount--;
     }
-}
+    public int getItemCount(){
 
-}
-public void checkForExpiredItems(){
-
-    for(int i = 0 ; i<items.size() ; i++){
-        if(items.get(i).getDaysLeft()<=0){
-            deleteItem(items.get(i));
-        }
+        return itemCount;
     }
-}
-public void setTimer() {
+    public Item getItemByIndex(int index){
 
-    task = new TimerTask() {
+        return this.items.get(index);
+    }
 
-        @Override
-        public void run() {
-            checkForExpiredItems();
+    public void addItem(Item item , int quantity){
+
+        for(int i = 0 ; i< quantity ; i++){
+
+            items.add(item);
+            itemCount++;
 
         }
-    };
-    Date today = new Date();
-    Date tommorow = new Date(today.getTime() + (1000 * 60 * 60 * 24));
-    timer.scheduleAtFixedRate(task, 0, tommorow.getTime());
-}
+        setTimer();
 
-public ArrayList<Item> getFruits(){
+    }
+    public void deleteItem(Item item){
 
-    ArrayList<Item> fruits = new ArrayList<Item>();
+        for(int i = 0 ; i < items.size() ; i++){
 
-    for(int i = 0 ; i<this.itemCount ; i++){
-
-        if(this.items.get(i).getType().equals(Type.FRUIT)){
-
-            fruits.add(this.items.get(i));
+            if(items.get(i).equals(item)){
+                items.remove(i);
+                itemCount--;
+            }
         }
 
     }
-    return fruits;
-}
-public ArrayList<Item> getVegetables(){
-    
-    ArrayList<Item> vegetables = new ArrayList<Item>();
+    public void checkForExpiredItems(){
 
-    for(int i = 0 ; i<this.itemCount ; i++){
-
-        if(this.items.get(i).getType().equals(Type.VEGETABLE)){
-
-            vegetables.add(this.items.get(i));
+        for(int i = 0 ; i<items.size() ; i++){
+            if(items.get(i).getDaysLeft()==0){
+                deleteItem(items.get(i));
+            }
         }
-
     }
-    return vegetables;
-}
-public ArrayList<Item> getMeats(){
-    
-    ArrayList<Item> meats = new ArrayList<Item>();
+    public void setTimer() {
 
-    for(int i = 0 ; i<this.itemCount ; i++){
+        task = new TimerTask() {
 
-        if(this.items.get(i).getType().equals(Type.MEAT)){
+            @Override
+            public void run() {
+                checkForExpiredItems();
 
-            meats.add(this.items.get(i));
+            }
+        };
+
+        timer.scheduleAtFixedRate(task, 0, 1000*60*60*24);
+    }
+
+    public ArrayList<Item> getFruits(){
+
+        ArrayList<Item> fruits = new ArrayList<Item>();
+
+        for(int i = 0 ; i<this.itemCount ; i++){
+
+            if(this.items.get(i).getType().equals(Type.FRUIT)){
+
+                fruits.add(this.items.get(i));
+            }
+
         }
-
+        return fruits;
     }
-    return meats;
-}
-public ArrayList<Item> getLiquids(){
-    
-    ArrayList<Item> liquids = new ArrayList<Item>();
+    public ArrayList<Item> getVegetables(){
 
-    for(int i = 0 ; i<this.itemCount ; i++){
+        ArrayList<Item> vegetables = new ArrayList<Item>();
 
-        if(this.items.get(i).getType().equals(Type.LIQUID)){
+        for(int i = 0 ; i<this.itemCount ; i++){
 
-            liquids.add(this.items.get(i));
+            if(this.items.get(i).getType().equals(Type.VEGETABLE)){
+
+                vegetables.add(this.items.get(i));
+            }
+
         }
-
+        return vegetables;
     }
-    return liquids;
-}
-    
+    public ArrayList<Item> getMeats(){
+
+        ArrayList<Item> meats = new ArrayList<Item>();
+
+        for(int i = 0 ; i<this.itemCount ; i++){
+
+            if(this.items.get(i).getType().equals(Type.MEAT)){
+
+                meats.add(this.items.get(i));
+            }
+
+        }
+        return meats;
+    }
+    public ArrayList<Item> getLiquids(){
+
+        ArrayList<Item> liquids = new ArrayList<Item>();
+
+        for(int i = 0 ; i<this.itemCount ; i++){
+
+            if(this.items.get(i).getType().equals(Type.LIQUID)){
+
+                liquids.add(this.items.get(i));
+            }
+
+        }
+        return liquids;
+    }
+
 }

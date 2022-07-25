@@ -6,6 +6,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class Item {
 
     //variables
@@ -23,7 +26,7 @@ public class Item {
         this.name = name;
         this.type = type;
         this.daysLeft = daysLeft;
-        
+
         setTimer();
 
     }
@@ -136,34 +139,39 @@ public class Item {
     public boolean getWarningLevelTwo(){
         return this.warningLevelTwo;
     }
-    public void updateTommorow(Date now, Date tomorrow){
-
-        now = new Date();
-        tomorrow = new Date(now.getTime()+1000*10);
-        
-    }
 
     public void setTimer() {
-        
-        Date today = new Date();
-        //Date tomorrow = new Date(today.getTime() + (1000 * 5));
 
         task = new TimerTask() {
             @Override
             public void run() {
 
-                //updateTommorow(today, tomorrow);
-                daysLeft--;
+                if(daysLeft>0){
+
+                    daysLeft--;
+
+                }
+
                 setWarningLevelOne();
                 setWarningLevelTwo();
-                
-                System.out.println(getDaysLeft());
+
 
             }
         };
-        
-        System.out.println(getDaysLeft());
-        
-        timer.scheduleAtFixedRate(task, 0, 1000);
+
+
+        timer.scheduleAtFixedRate(task, 0, 1000*60*60*24);
     }
+    public String toString(){
+
+        return this.name;
+
+
+    }
+
+
+
+
+
+
 }

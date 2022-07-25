@@ -2,33 +2,36 @@ package com.example.fridger.model;
 
 public class Fridger {
 
-private Fridge fridge;
-private User user;
-private Recipes recipes;
 
-public Fridger(String username, String password){
+    private Fridge fridge;
+    private Recipes recipes;
 
-fridge = new Fridge();
-user = new User(username, password);
+    public Fridger(){
+
+         recipes = new Recipes(new AllRecipes());
+         fridge = new Fridge();
 
 
-}
+    }
 
-public Fridge getFridge(){
-    return this.fridge;
-}
+    public Fridge getFridge(){
 
+        return this.fridge;
+
+    }
 public Recipes getAllRecipes(){
+
     return this.recipes;
 }
-public void AddItem(Item item, int quantity){
+
+public void AddItem(Item item, int quantity) {
 
     this.fridge.addItem(item, quantity);
+    recipes.setAvailableRecipes(new AllRecipes());
+    
 
 }
-public User getUser(){
 
-    return this.user;
-}
+
 
 }
