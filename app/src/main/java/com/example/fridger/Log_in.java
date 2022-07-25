@@ -78,13 +78,5 @@ public class Log_in extends AppCompatActivity {
 
     }
 
-    public String getUser()
-    {
-        return username.getText().toString();
-    }
 
-    public void setUser(String user)
-    {
-        username.setText(user);
-    }
 }

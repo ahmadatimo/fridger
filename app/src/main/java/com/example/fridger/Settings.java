@@ -6,15 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.sql.SQLException;
 
 public class Settings extends AppCompatActivity {
 
-    Button logOut , goBack;
-    ImageButton userpencil , passpencil;
+    Button logOut , goBack, okPassword, okUser;
+    ImageButton userPencil , passPencil;
+    TextView username,password;
+    EditText editUsername,editPassword;
     DBHelper database;
-    Log_in user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,10 +27,19 @@ public class Settings extends AppCompatActivity {
 
         logOut = findViewById(R.id.logOut);
         goBack = findViewById(R.id.goBack);
-        userpencil = findViewById(R.id.userpencil);
-        passpencil = findViewById(R.id.passpencil);
+        okPassword = findViewById(R.id.okForPassword);
+        okUser = findViewById(R.id.okForUser);
+        userPencil = findViewById(R.id.userpencil);
+        passPencil = findViewById(R.id.passpencil);
+        username = findViewById(R.id.usernameViewText);
+        password = findViewById(R.id.passwordViewText);
+        editUsername = findViewById(R.id.usernameEditText);
+        editPassword = findViewById(R.id.passwordEditText);
         database = new DBHelper(this);
-        user = new Log_in();
+        editUsername.setVisibility(View.INVISIBLE);
+        okPassword.setVisibility(View.INVISIBLE);
+        okUser.setVisibility(View.INVISIBLE);
+
 
         logOut.setOnClickListener(new View.OnClickListener()
         {
@@ -47,10 +61,63 @@ public class Settings extends AppCompatActivity {
             }
         });
 
-        passpencil.setOnClickListener(new View.OnClickListener() {
+        userPencil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = user.getUser();
+                okUser.setVisibility(View.VISIBLE);
+                username.setVisibility(View.INVISIBLE);
+                editUsername.setVisibility(View.VISIBLE);
+            }
+        });
+
+        okUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = editUsername.getText().toString();
+                Boolean checkUserUpdate = database.updateUsername(name);
+
+                if(checkUserUpdate == true)
+                {
+                    username.setText(name);
+                    Toast.makeText(Settings.this, "Your Username is updated", Toast.LENGTH_SHORT).show();
+                }
+                username.setVisibility(View.VISIBLE);
+                editUsername.setVisibility(View.INVISIBLE);
+                okUser.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        passPencil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                okPassword.setVisibility(View.VISIBLE);
+                password.setVisibility(View.INVISIBLE);
+                editPassword.setVisibility(View.VISIBLE);
+
+
+            }
+        });
+
+        okPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String pass = editPassword.getText().toString();
+
+                Boolean checkPasswordUpdate = database.updatePassword(pass);
+
+                if(checkPasswordUpdate == true)
+                {
+                    String stars = "";
+                    for(int i = 0; i < editPassword.getText().length(); i++)
+                    {
+                        stars = stars + "*";
+                    }
+                    password.setText(stars);
+                    Toast.makeText(Settings.this, "Your password is updated", Toast.LENGTH_SHORT).show();
+                }
+                password.setVisibility(View.VISIBLE);
+                editPassword.setVisibility(View.INVISIBLE);
+                okPassword.setVisibility(View.INVISIBLE);
             }
         });
     }

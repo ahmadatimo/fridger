@@ -13,6 +13,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 
+import java.sql.SQLException;
+
 
 public class DBHelper extends SQLiteOpenHelper {
 
@@ -106,12 +108,34 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
-    public void updateUsername(String username){
-        System.out.println("Updated the username");
+    public boolean updateUsername(String username){
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("username",username);
+        long result = db.update("users",values, "username = ?", new String[]{this.username});
+        if (result == -1)// the previous line will check if the username and password
+        {                // are stored if yes will return true if no will return false
+            return  false;
+        }
+        else
+        {
+            return  true;
+        }
     }
 
-    public void updatePassword(String password){
-        System.out.println("Updated the password");
+    public boolean updatePassword( String password){
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("password",password);
+        long result = db.update("users",values, "username = ?", new String[]{username});
+        if (result == -1)// the previous line will check if the username and password
+        {                // are stored if yes will return true if no will return false
+            return  false;
+        }
+        else
+        {
+            return  true;
+        }
     }
 
     public void updateProfilePic(int profilePic)
@@ -122,4 +146,8 @@ public class DBHelper extends SQLiteOpenHelper {
         db.update("users",values,"username = ?", new String[]{username});
     }
 
+
 }
+
+
+
