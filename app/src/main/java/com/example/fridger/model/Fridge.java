@@ -16,7 +16,7 @@ public class Fridge {
 
     Fridge(){
         items = new ArrayList<Item>();
-
+        itemCount = 0;
     }
     public int getItemCount(){
 
