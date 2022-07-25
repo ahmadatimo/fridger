@@ -198,7 +198,7 @@
             android:backgroundTint="#E35959"
             android:text="go back"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="50dp"
             android:textStyle="bold" />
 

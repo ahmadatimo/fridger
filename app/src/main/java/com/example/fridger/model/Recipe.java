@@ -1,7 +1,7 @@
 
 package com.example.fridger.model;
 
-public class Recipe{
+public class Recipe implements Comparable{
 
 private String name;
 private String howToMake;
@@ -46,9 +46,31 @@ public Quantity getQuantityByIndex(int index){
 }
 
 
+    @Override
+    public int compareTo(Object obj ){
+
+        if(obj instanceof Recipe){
+
+            Recipe newRecipe = (Recipe)obj;
 
 
+            if(this.name.compareTo(newRecipe.name)>0){
 
-    
+                return 1;
 
+            }
+            else if(this.name.compareTo(newRecipe.name)<0){
+
+                return -1;
+            }
+            else{
+                return 0;
+            }
+
+        }
+        else{
+            return -1;
+        }
+
+    }
 }

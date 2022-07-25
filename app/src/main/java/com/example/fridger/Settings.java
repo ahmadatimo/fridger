@@ -94,7 +94,6 @@ public class Settings extends AppCompatActivity {
                 password.setVisibility(View.INVISIBLE);
                 editPassword.setVisibility(View.VISIBLE);
 
-
             }
         });
 
