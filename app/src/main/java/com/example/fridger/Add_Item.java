@@ -67,8 +67,10 @@ public class Add_Item extends AppCompatActivity {
     private void addItem()
     {
         RegisterActivity ra = new RegisterActivity();
-        if(type.getText().toString().equalsIgnoreCase("Fruit"))
+        if(type.getText().toString().equals("Fruit")){
             ra.getFridger().AddItem(new Item(item.getText().toString(),Integer.parseInt(daysLeft.getText().toString()), Type.FRUIT),Integer.parseInt(quantity.getText().toString()));
+        }
+
 
         
 
