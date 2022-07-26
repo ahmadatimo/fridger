@@ -2,7 +2,6 @@ package com.example.fridger.model;
 
 public class Fridger {
 
-
     private Fridge fridge;
     private Recipes recipes;
 

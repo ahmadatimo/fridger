@@ -10,8 +10,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.fridger.model.Fridger;
+import com.example.fridger.model.FridgerHelper;
 import com.example.fridger.model.Item;
 import com.example.fridger.model.Type;
+
+import java.sql.SQLOutput;
 
 public class Add_Item extends AppCompatActivity {
 
@@ -20,6 +24,7 @@ public class Add_Item extends AppCompatActivity {
     Button goBack, add;
     static String typeChanger= "";
     static String textSize ="0";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +32,6 @@ public class Add_Item extends AppCompatActivity {
 
         initializingData();
         setTypeChanger();
-
 
        goBack.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -76,7 +80,6 @@ public class Add_Item extends AppCompatActivity {
 
     private void addItem()
     {
-        RegisterActivity ra = new RegisterActivity();
         if(type.getText().toString().equals("Fruit") && !item.equals("") && !quantity .equals("") && !daysLeft.equals("") ){
             Toast.makeText(getApplicationContext(), "All Requirements met ", Toast.LENGTH_SHORT).show();
             String Item = item.getText().toString();
@@ -84,7 +87,9 @@ public class Add_Item extends AppCompatActivity {
             Type type = Type.FRUIT;
             int quantit = Integer.parseInt(quantity.getText().toString());
             System.out.println(Item + "," + days  + "," + type.toString() + "," + quantit );
-            ra.getFridger().AddItem(new Item(Item,days, type),quantit);
+            FridgerHelper.fridger.AddItem(new Item(Item,days,Type.FRUIT),quantit);
+            System.out.println(FridgerHelper.fridger.getFridge().getItemByIndex(0));
+            System.out.println(FridgerHelper.fridger.getFridge().getItemByIndex(1));
         }
 
 

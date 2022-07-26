@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.fridger.model.Fridger;
+import com.example.fridger.model.FridgerHelper;
 import com.example.fridger.model.PFP;
 
 import java.util.ArrayList;
@@ -19,7 +20,9 @@ public class RegisterActivity extends AppCompatActivity {
     EditText username, password , confirmPassword;
     Button register, signin;
     DBHelper database;
+
     Fridger fridger;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
         register = findViewById(R.id.register);
         signin = findViewById(R.id.signin);
         database = new DBHelper(this);
+
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,9 +62,10 @@ public class RegisterActivity extends AppCompatActivity {
                             boolean add = database.insertData(user,pass,PFP.image); // we will add the new input to the database
                             if(add == true) // the database had been written
                             {
+                                FridgerHelper fh = new FridgerHelper();
                                 Toast.makeText(RegisterActivity.this,"The new account is Registered",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(),MainMenu.class);
-                                fridger = new Fridger();
+
                                 startActivity(intent); // will jump to main menu
                             }
                             else
@@ -90,10 +95,6 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-    }
-    public Fridger getFridger(){
-
-        return this.fridger;
     }
 
 
