@@ -11,7 +11,7 @@ Quantity(String amount, Measure kind){
     this.amount = amount;
     this.kind = kind;
 }
-public String getAmout(){
+public String getAmount(){
 
     return this.amount;
 
