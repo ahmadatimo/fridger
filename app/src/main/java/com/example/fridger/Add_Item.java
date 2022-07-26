@@ -84,8 +84,9 @@ public class Add_Item extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "All Requirements met ", Toast.LENGTH_SHORT).show();
             String Item = item.getText().toString();
             int days = Integer.parseInt(daysLeft.getText().toString());
-            Type type = Type.FRUIT;
+            Type typeF = Type.FRUIT;
             int quantit = Integer.parseInt(quantity.getText().toString());
+
             System.out.println(Item + "," + days  + "," + type.toString() + "," + quantit );
             FridgerHelper.fridger.AddItem(new Item(Item,days,Type.FRUIT),quantit);
             System.out.println(FridgerHelper.fridger.getFridge().getItemByIndex(0));

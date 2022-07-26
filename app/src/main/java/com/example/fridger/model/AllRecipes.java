@@ -7,7 +7,7 @@ public class AllRecipes {
     private int totalRecipes;
 
     AllRecipes(){
-
+        totalRecipes = 0;
         recipes = new ArrayList<Recipe>();
         String[] pastaIngredients =  {"Pasta","Alfredo Sauce","Mushroom"};
         Quantity[] pastaQuantities = {new Quantity("100", Measure.GR) , new Quantity("3/4", Measure.PACKET) , new Quantity("150", Measure.GR)};

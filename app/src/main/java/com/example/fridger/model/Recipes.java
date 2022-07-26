@@ -12,6 +12,7 @@ public class Recipes {
 
         availableRecipes = new ArrayList<Recipe>();
         fridge = new Fridge();
+        count = 0;
         setAvailableRecipes(new AllRecipes());
 
     }
