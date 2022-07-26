@@ -128,7 +128,7 @@ public class Fridge extends AppCompatActivity {
                 String items = "";
                 for(int i = 0 ; i< FridgerHelper.fridger.getFridge().getItemCount() ; i++){
                     if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getType().equals(Type.VEGETABLE)) {
-                        if()
+                        
                         items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft() + "\n"+"------------------------------\n";
                     }
                 }
