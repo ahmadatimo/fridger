@@ -111,7 +111,15 @@ public class Fridge extends AppCompatActivity {
                 String items = "";
                 for(int i = 0 ; i< FridgerHelper.fridger.getFridge().getItemCount() ; i++){
                     if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getType().equals(Type.FRUIT)) {
-                        items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft() + "\n"+"------------------------------\n";
+                        if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getWarningLevelOne()){
+                            items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft()+"!" + "\n"+"------------------------------\n";
+
+                        }
+                        else if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getWarningLevelTwo())
+                            items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft()+ "!!" + "\n"+"------------------------------\n";
+
+                        else
+                            items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft() + "\n"+"------------------------------\n";
                     }
                 }
                  intent.putExtra(StoredItems.copyStored,items);
@@ -128,8 +136,15 @@ public class Fridge extends AppCompatActivity {
                 String items = "";
                 for(int i = 0 ; i< FridgerHelper.fridger.getFridge().getItemCount() ; i++){
                     if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getType().equals(Type.VEGETABLE)) {
-                        
-                        items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft() + "\n"+"------------------------------\n";
+                        if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getWarningLevelOne()){
+                            items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft()+"!" + "\n"+"------------------------------\n";
+
+                        }
+                        else if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getWarningLevelTwo())
+                            items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft()+ "!!" + "\n"+"------------------------------\n";
+
+                        else
+                            items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft() + "\n"+"------------------------------\n";
                     }
                 }
                 intent.putExtra(StoredItems.copyStored,items);
@@ -146,7 +161,15 @@ public class Fridge extends AppCompatActivity {
                 String items = "";
                 for(int i = 0 ; i< FridgerHelper.fridger.getFridge().getItemCount() ; i++){
                     if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getType().equals(Type.MEAT)) {
-                        items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft() +"\n------------------------------\n";
+                        if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getWarningLevelOne()){
+                            items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft()+"!" + "\n"+"------------------------------\n";
+
+                        }
+                        else if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getWarningLevelTwo())
+                            items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft()+ "!!" + "\n"+"------------------------------\n";
+
+                        else
+                            items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft() + "\n"+"------------------------------\n";
                     }
                 }
                 intent.putExtra(StoredItems.copyStored,items);
@@ -164,7 +187,15 @@ public class Fridge extends AppCompatActivity {
                 String items = "";
                 for(int i = 0 ; i< FridgerHelper.fridger.getFridge().getItemCount() ; i++){
                     if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getType().equals(Type.LIQUID)) {
-                        items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft() +"\n"+"------------------------------\n";
+                        if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getWarningLevelOne()){
+                            items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft()+"!" + "\n"+"------------------------------\n";
+
+                        }
+                        else if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getWarningLevelTwo())
+                            items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft()+ "!!" + "\n"+"------------------------------\n";
+
+                        else
+                            items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft() + "\n"+"------------------------------\n";
 
                     }
                 }
