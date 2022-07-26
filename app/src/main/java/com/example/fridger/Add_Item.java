@@ -80,17 +80,45 @@ public class Add_Item extends AppCompatActivity {
 
     private void addItem()
     {
-        if(type.getText().toString().equals("Fruit") && !item.equals("") && !quantity .equals("") && !daysLeft.equals("") ){
+        if(type.getText().toString().equalsIgnoreCase("Fruit") && !item.equals("") && !quantity .equals("") && !daysLeft.equals("") ){
             Toast.makeText(getApplicationContext(), "All Requirements met ", Toast.LENGTH_SHORT).show();
             String Item = item.getText().toString();
             int days = Integer.parseInt(daysLeft.getText().toString());
             Type typeF = Type.FRUIT;
             int quantit = Integer.parseInt(quantity.getText().toString());
 
-            System.out.println(Item + "," + days  + "," + type.toString() + "," + quantit );
             FridgerHelper.fridger.AddItem(new Item(Item,days,Type.FRUIT),quantit);
-            System.out.println(FridgerHelper.fridger.getFridge().getItemByIndex(0));
-            System.out.println(FridgerHelper.fridger.getFridge().getItemByIndex(1));
+
+        }
+        if(type.getText().toString().equalsIgnoreCase("Vegetables") && !item.equals("") && !quantity .equals("") && !daysLeft.equals("") ){
+            Toast.makeText(getApplicationContext(), "All Requirements met ", Toast.LENGTH_SHORT).show();
+            String Item = item.getText().toString();
+            int days = Integer.parseInt(daysLeft.getText().toString());
+            Type typeF = Type.VEGETABLE;
+            int quantit = Integer.parseInt(quantity.getText().toString());
+
+            FridgerHelper.fridger.AddItem(new Item(Item,days,Type.VEGETABLE),quantit);
+
+        }
+        if(type.getText().toString().equalsIgnoreCase("Meat") && !item.equals("") && !quantity .equals("") && !daysLeft.equals("") ){
+            Toast.makeText(getApplicationContext(), "All Requirements met ", Toast.LENGTH_SHORT).show();
+            String Item = item.getText().toString();
+            int days = Integer.parseInt(daysLeft.getText().toString());
+            Type typeF = Type.MEAT;
+            int quantit = Integer.parseInt(quantity.getText().toString());
+
+            FridgerHelper.fridger.AddItem(new Item(Item,days,Type.MEAT),quantit);
+
+        }
+        if(type.getText().toString().equalsIgnoreCase("Liquid") && !item.equals("") && !quantity .equals("") && !daysLeft.equals("") ){
+            Toast.makeText(getApplicationContext(), "All Requirements met ", Toast.LENGTH_SHORT).show();
+            String Item = item.getText().toString();
+            int days = Integer.parseInt(daysLeft.getText().toString());
+            Type typeF = Type.LIQUID;
+            int quantit = Integer.parseInt(quantity.getText().toString());
+
+            FridgerHelper.fridger.AddItem(new Item(Item,days,Type.LIQUID),quantit);
+
         }
 
 

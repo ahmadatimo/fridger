@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import com.example.fridger.model.FridgerHelper;
 import com.example.fridger.model.PFP;
-
+import com.example.fridger.model.Type;
 
 
 public class Fridge extends AppCompatActivity {
@@ -107,9 +107,12 @@ public class Fridge extends AppCompatActivity {
                 Toast.makeText(Fridge.this, "Fruits...", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext() , StoredItems.class);
                 intent.putExtra(StoredItems.copyTitle , "Fruits");
+
                 String items = "";
                 for(int i = 0 ; i< FridgerHelper.fridger.getFridge().getItemCount() ; i++){
-                    items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName()+FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft()+"\n";
+                    if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getType().equals(Type.FRUIT)) {
+                        items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft() + "\n"+"------------------------------\n";
+                    }
                 }
                  intent.putExtra(StoredItems.copyStored,items);
                 startActivity(intent);
@@ -122,6 +125,14 @@ public class Fridge extends AppCompatActivity {
                 Toast.makeText(Fridge.this, "Vegetables...", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext() , StoredItems.class);
                 intent.putExtra(StoredItems.copyTitle,"Vegetables");
+                String items = "";
+                for(int i = 0 ; i< FridgerHelper.fridger.getFridge().getItemCount() ; i++){
+                    if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getType().equals(Type.VEGETABLE)) {
+                        if()
+                        items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft() + "\n"+"------------------------------\n";
+                    }
+                }
+                intent.putExtra(StoredItems.copyStored,items);
                 startActivity(intent);
             }
         });
@@ -132,6 +143,13 @@ public class Fridge extends AppCompatActivity {
                 Toast.makeText(Fridge.this, "Meat...", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext() , StoredItems.class);
                 intent.putExtra(StoredItems.copyTitle,"Meat");
+                String items = "";
+                for(int i = 0 ; i< FridgerHelper.fridger.getFridge().getItemCount() ; i++){
+                    if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getType().equals(Type.MEAT)) {
+                        items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft() +"\n------------------------------\n";
+                    }
+                }
+                intent.putExtra(StoredItems.copyStored,items);
                 startActivity(intent);
 
             }
@@ -143,6 +161,14 @@ public class Fridge extends AppCompatActivity {
                 Toast.makeText(Fridge.this, "Liquids...", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext() , StoredItems.class);
                 intent.putExtra(StoredItems.copyTitle,"Liquids");
+                String items = "";
+                for(int i = 0 ; i< FridgerHelper.fridger.getFridge().getItemCount() ; i++){
+                    if(FridgerHelper.fridger.getFridge().getItemByIndex(i).getType().equals(Type.LIQUID)) {
+                        items += FridgerHelper.fridger.getFridge().getItemByIndex(i).getName() +"     :    "+ FridgerHelper.fridger.getFridge().getItemByIndex(i).getDaysLeft() +"\n"+"------------------------------\n";
+
+                    }
+                }
+                intent.putExtra(StoredItems.copyStored,items);
                 startActivity(intent);
             }
         });
