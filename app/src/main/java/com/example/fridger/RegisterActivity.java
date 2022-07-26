@@ -18,10 +18,9 @@ import java.util.ArrayList;
 public class RegisterActivity extends AppCompatActivity {
 
     EditText username, password , confirmPassword;
-    Button register, signin;
+    Button register, signIn;
     DBHelper database;
-
-    Fridger fridger;
+    FridgerHelper fh;
 
 
     @Override
@@ -32,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         confirmPassword = findViewById(R.id.confirmPassword);
         register = findViewById(R.id.register);
-        signin = findViewById(R.id.signin);
+        signIn = findViewById(R.id.signin);
         database = new DBHelper(this);
 
 
@@ -62,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
                             boolean add = database.insertData(user,pass,PFP.image); // we will add the new input to the database
                             if(add == true) // the database had been written
                             {
-                                FridgerHelper fh = new FridgerHelper();
+                                fh = new FridgerHelper();
                                 Toast.makeText(RegisterActivity.this,"The new account is Registered",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(),MainMenu.class);
 
@@ -87,7 +86,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
 
-        signin.setOnClickListener(new View.OnClickListener() {
+        signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Log_in.class);
