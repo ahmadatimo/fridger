@@ -35,7 +35,7 @@
             android:layout_marginTop="110dp"
             android:background="@color/teal_200"
             android:fontFamily="@font/imbue_medium"
-            android:text=" name : Quantity : days left "
+            android:text=" name           :        days left "
             android:textAlignment="center"
             android:textColor="@color/purple_700"
             android:textSize="40dp" />

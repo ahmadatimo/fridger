@@ -44,6 +44,7 @@ public class StoredItems extends AppCompatActivity {
         title = intent.getStringExtra(copyTitle);
         stored = intent.getStringExtra(copyStored);
         recipeTitle.setText(title);
+        changeStored.setText(stored);
     }
 
     public void buttonsFunctions()
